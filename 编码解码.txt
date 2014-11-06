@@ -1,0 +1,12 @@
+NSString* urlEncodeValue(NSString *str)
+{
+	NSString *result = (NSString *) CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)str, NULL, CFSTR(":/?#[]@!$&’()*+,;="), kCFStringEncodingUTF8);
+	return [result autorelease];
+}
+
+NSString* URLDecodeValue(NSString *str)
+{
+	//NSString *result = (NSString *) CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)str, CFSTR(""), kCFStringEncodingUTF8);
+	//return [result autorelease];
+	return [str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}

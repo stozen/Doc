@@ -1,0 +1,1 @@
+[m_textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length

@@ -1,0 +1,5 @@
+let context = self.extensionContext
+        let url = NSURL.URLWithString("prefs:root=General&path=VPN")
+        context?.openURL(url, completionHandler: { (Bool) -> Void in
+            println("open done.")
+        })
