@@ -1,0 +1,13 @@
+
+
+保留两位小数
+//千分位
+-(NSString *)convert:(float )number
+{
+    
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init] ;
+    [numberFormatter setPositiveFormat:@"###,##0.00;"];
+    NSString *formattedNumberString = [numberFormatter stringFromNumber:[NSNumber numberWithDouble:number]];
+    return formattedNumberString;
+    
+}
