@@ -1,0 +1,20 @@
+#!/bin/sh
+# 在终端进入工程目录下执行下面代码
+#功能：找到没有用到的.png .jpg .gif文件 并且写入到当前工程目录下的unusedImages.txt文件中
+
+i=0
+PROJ=`find . -name '*.xib' -o -name '*.[mh]' -o -name '*.storyboard' -o -name '*.plist'`
+
+for imageName in `find . -iname *.png -o -iname *.jpg -o -iname *.gif `
+do
+    #name=`basename $png`
+    name=`basename -s .png $imageName | xargs basename -s .jpg | xargs basename -s .gif `
+    name=`basename -s @2x $name`
+    name=`basename -s ~ipad $name`
+    name=`basename -s @iPad $name`
+    if ! grep -q $name $PROJ; then
+    i=$(( $i + 1 ))
+    echo  "$i  $imageName" >> './unusedImages.txt';
+fi
+
+done
