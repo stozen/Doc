@@ -74,10 +74,7 @@ def writeHost(host):
     hosts = '/etc/hosts'
     with open(hosts, 'w') as f:
         f.writelines(host)
-        h1 = ('127.0.0.1	localhost',
-                '255.255.255.255	broadcasthost',
-                '::1             localhost',
-                'fe80::1%lo0	localhost',
+        h1 = ('185.31.17.184'  'github.global.ssl.fastly.net',
         )
         for i in h1:
             f.writelines(i)
