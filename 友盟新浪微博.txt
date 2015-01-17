@@ -1,0 +1,2 @@
+sns.whalecloud.com友盟分享新浪微博安全域名
+在友盟后台添加新浪微博appkey

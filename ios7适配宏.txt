@@ -1,0 +1,8 @@
+#define IOS7 if([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=7)\
+{self.extendedLayoutIncludesOpaqueBars = NO;\
+self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;}
+
+
+
+
+self.navigationController.navigationBar.translucent = NO;

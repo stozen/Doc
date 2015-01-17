@@ -1,0 +1,40 @@
+- (void)jumpWithTitle:(NSString *)theTitle
+           dataOfIcon:(NSData *)theDataOfIcon
+         appURLScheme:(NSString *)theAppURLScheme
+             timesamp:(NSTimeInterval)theTimesamp
+{
+    NSString *file = [[NSBundle mainBundle] pathForResource:@"index"
+                                                     ofType:@"html"];
+    
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory
+                                                                                           , NSUserDomainMask
+                                                                                           , YES) lastObject] stringByAppendingPathComponent:@"index.html"]
+                                               error:nil];
+    
+    NSString *content = [NSString stringWithContentsOfFile:file
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:&error];
+ 
+    
+    content = [NSString stringWithFormat:content,
+               theTitle,
+               [theDataOfIcon base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength],
+               theAppURLScheme,
+               theTimesamp];
+    
+    NSData *data = [[NSData alloc] initWithBytes:[content cStringUsingEncoding:NSUTF8StringEncoding]
+                                          length:strlen([content cStringUsingEncoding:NSUTF8StringEncoding])];
+    
+    NSString *indexHTMLString = [NSString stringWithFormat:@"<head><meta http-equiv=\"refresh\" content=\"0; URL=data:text/html;charset=UTF-8;base64,%@\"></head>", [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]];
+    
+    [indexHTMLString writeToFile:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory
+                                                                       , NSUserDomainMask
+                                                                       , YES) lastObject] stringByAppendingPathComponent:@"index.html"]
+                      atomically:YES
+                        encoding:NSUTF8StringEncoding
+                           error:&error];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://127.0.0.1:8080/files/index.html"]];
+
+}

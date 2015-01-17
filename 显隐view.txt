@@ -1,0 +1,13 @@
+- (void)ViewAnimation:(UIView*)view willHidden:(BOOL)hidden {
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        if (hidden) {
+            view.frame = CGRectMake(0, SCREEN_HEIGHT, 320, 162);
+        } else {
+            [view setHidden:hidden];
+            view.frame = CGRectMake(0, SCREEN_HEIGHT-162, 320, 162);
+        }
+    } completion:^(BOOL finished) {
+        [view setHidden:hidden];
+    }];
+}

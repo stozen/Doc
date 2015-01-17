@@ -1,0 +1,19 @@
+@interface CCTextField : UITextField
+- (CGRect)textRectForBounds:(CGRect)bounds;
+- (CGRect)editingRectForBounds:(CGRect)bounds;
+
+@end
+
+@implementation CCTextField
+
+- (CGRect)textRectForBounds:(CGRect)bounds {
+    return CGRectInset( bounds , 10 , 0 );
+}
+
+//控制编辑文本时所在的位置，左右缩 10
+- (CGRect)editingRectForBounds:(CGRect)bounds {
+    return CGRectInset( bounds , 10 , 0 );
+}
+
+
+@end
