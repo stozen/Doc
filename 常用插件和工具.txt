@@ -1,0 +1,38 @@
+插件：
+
+
+Alcatraz    管理第三方插件
+
+cocoapods-xcode-plugin
+
+FuzzyAutocompletePlugin-master
+
+KSImageNamed-Xcode-master
+
+SCXcodeMinimap   编辑器小地图
+
+VVDocumenter-Xcode
+
+xAlign
+
+工具：
+
+
+subline 
+
+
+prepo    制作icon
+
+iphone 配置实用工具
+
+sketch   切图
+
+Postman
+
+charles     网络代理监控
+
+MesaSqlite 数据库
+
+
+
+
