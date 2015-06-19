@@ -15,6 +15,9 @@ VVDocumenter-Xcode
 
 xAlign
 
+
+
+
 工具：
 
 
@@ -32,6 +35,20 @@ Postman
 charles     网络代理监控
 
 MesaSqlite 数据库
+
+
+Beyond Compare  比较
+
+cornerstone    svn
+
+
+github
+
+
+Reveal     分析UI 图层
+
+
+Parallels Desktop/VMWare   虚拟机
 
 
 
