@@ -31,3 +31,18 @@ CFDA1551 51B05B5D 2D3C8CFE FA8B4285
 346372DA 37AA8ABA 6EB30E41 781BC81F
 B5CA66E3 A09DBD3A 3FE85BBD 69893DBD
 ------ END LICENSE ------
+
+
+安装page control命令
+
+import urllib.request,os;pf = 'Package Control.sublime-package';ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) );open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+
+
+
+
+
+
+
+
+
+
