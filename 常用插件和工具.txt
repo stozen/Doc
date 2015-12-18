@@ -1,4 +1,4 @@
-插件：
+xcode插件：
 
 
 Alcatraz    管理第三方插件
@@ -18,13 +18,14 @@ xAlign
 
 
 
-工具：
+mac工具：
 
 
 subline 
 
 
 prepo    制作icon
+
 
 iphone 配置实用工具
 
@@ -56,6 +57,44 @@ mou markdown编辑器
 
 ThemeEngine   打开Assets.car文件 复制粘贴导出
 
+gisto      gist管理工具
+
+
+Mindjet MindMananger  脑图工具
+
+Dash   文档管理
+
+CheatSheet  快捷键提示
+
+Lantern  翻墙
+
+ShadowSocks 翻墙
+
+TeamViewer  远程管理
+
+Pocket    稍后阅读
+
+
+Avira  安全工具
+
+
+
+chrome插件：
+
+Pocket  稍后阅读插件
+
+
+AdBlock广告拦截
+
+
+Avira  安全插件
+
+
+postman http请求代理工具
+
+proxy代理
+
+The Missing JSON Inspector      json格式查看
 
 
 
