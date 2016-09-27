@@ -34,6 +34,11 @@
 -(void)initCircleImage
 {
 
+
+
+	[self layoutIfNeeded];//适配xcode8
+
+
     [self.layer setCornerRadius:CGRectGetHeight([self bounds]) / 2];
     self.layer.masksToBounds = YES;
     
