@@ -52,8 +52,9 @@ Reveal     分析UI 图层
 Parallels Desktop/VMWare   虚拟机
 
 
-mou markdown编辑器
+mou markdown编辑器  不支持10.12
 
+Typora、MacDown mou的替代品
 
 ThemeEngine   打开Assets.car文件 复制粘贴导出
 
@@ -96,5 +97,9 @@ proxy代理
 
 The Missing JSON Inspector      json格式查看
 
+
+iOS
+
+shadowrocket
 
 
