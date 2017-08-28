@@ -178,7 +178,7 @@ git config --global user.email "eric@everzones.com"
  假如当前处于dev分支，master分支有更新，则可以使用rebase命令，将master分支的修改更新到当前dev，分支，效果和merge类似。不建议master分支使用rebase命令，dev分支最好经常rebase，获取master最新修改，防止后期合并时候和master有太多冲突。
  
  
-###协作workflow
+### 协作workflow
 
 * 远程仓库主要有两个分支，master分支和dev分支,本地分支有master分支，dev分支，同时根据需要也可以创建其他分支,例如feature或者bug等自定义分支
 
